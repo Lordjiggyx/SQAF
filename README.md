@@ -40,7 +40,7 @@ Does the task.....
 
 * If a task answers yes to less then 3 of the following questions it was deemed an S task.
 * If a task answers yes to more then 3 but less then 7 of the following questions it was deemed an M task.
-* If a task answers yes to more then 7 of the following questions it was deemed an L task.
+* If a task answers yes to 7 or more of the following questions it was deemed an L task.
 
 ### Tasks
 
@@ -55,8 +55,8 @@ A list of the initial tasks and estimations.
 * Creating a survey response - S
 * Adding an answer to a survey response - S
 * Getting all survey responses associated with a specific survey - L
-* Get average deviation - L
-* Get standard deviation - L
+* Get average deviation of a survey  - L
+* Get standard deviation of a survey - L
 * Get maximum score of a survey - L
 * Get minimum score of a survey - L
 * Get standard deviation for a specific question on a survey- L
@@ -80,6 +80,30 @@ To calculation of the velocity metric follows as:
 * divided the sum by 3 because there are 3 t-shirt sizes to get the velocity metric e.g. 9/3 = 3
 
 I would use this velocity metric to determine how fast the team is working in relation to the task sizes , the greater the number the more tasks getting completed.
+
+
+**Task Comparison**
+
+Two tasks that I will compare are
+
+1. Get average deviation of a survey
+2. Add a question to a survey
+
+| Question 	| Task 1 	| Task 2 	|
+|----------	|--------	|--------	|
+| 1        	| Yes    	| No     	|
+| 2        	| Yes    	| No     	|
+| 3        	| Yes    	| No     	|
+| 4        	| NO     	| No     	|
+| 5        	| NO     	| Yes    	|
+| 6        	| Yes    	| Yes    	|
+| 7        	| Yes    	| No     	|
+| 8        	| Yes    	| No     	|
+| 9        	| Yes    	| No     	|
+| SUM      	| 7      	| 2      	|
+
+As we can see task one answers yes to 7 questions meaning the it is L while task 2 only answers yes to 2 meaning that it is small 
+
 
 
 
