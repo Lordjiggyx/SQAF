@@ -50,13 +50,15 @@ public class Tester {
 	@Test
 	public void addQuestion()
 	{
-		//Creation of question object
+		//Creation of question objectS
 		Question one = new Question("Customer Service");
 		Question two = new Question("Food Quality");
 		
+		//Creation of survey class with just name
 		Survey s = new Survey("My Questions");
+		//adding questions to the surevy
 		s.add(one);
-		s.add(two)
+		s.add(two);
 		
 		assertEquals("Length of questions array should be 2",2 ,s.getQuestions().size());
 	}

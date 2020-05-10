@@ -19,7 +19,17 @@ public class Survey {
 		this.questions = questions;
 	}
 	
+	//Constructor taking in a name
+	public Survey(String name) {
+		this.name = name;
 
+	}
+	
+	//method to add questions
+	public void add(Question q)
+	{
+		this.questions.add(q);
+	}
 	
 	//Getters and setter for survey
 	public String getName() {
