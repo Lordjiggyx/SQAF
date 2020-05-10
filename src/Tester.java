@@ -30,4 +30,19 @@ public class Tester {
 		Survey s = new Survey("My Questions" ,questions);
 		assertTrue("Should be an object of type survey",s instanceof Survey);
 	}
+	
+	//Test to see if collection of questions exists within survey object
+	@Test
+	public void surveyQuestions()
+	{		
+		//Creation of question object
+		Question one = new Question("Customer Service");
+		//Collection to represent questions
+		ArrayList<Question> questions = new ArrayList<Question>();
+		//adding question to list
+		questions.add(one);
+		
+		Survey s = new Survey("My Questions" ,questions);
+		assertTrue("Should be an object of type arralylist",s.getQuestions() instanceof ArrayList);
+	}
 }
