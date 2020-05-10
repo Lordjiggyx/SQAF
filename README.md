@@ -15,7 +15,7 @@ This assignment requires me to also have the following sections :
 * A pull review checklist detailing a number of checks that a reviewer other than myself would make in the process of making pull requests
 
 
-#Sprint Backlog 
+# Sprint Backlog 
 
 This sprint backlog contains a list of tasks and the corresponding estimation associated with each task.
 
@@ -37,7 +37,9 @@ Does the task.....
 8. include extracting information from an element in a collection?
 
 
-* If a task answers yes to less then 3 of the following questions it was deemed an S task
-* If a task answers yes to more then 3 but less then 6 of the following questions it was deemed an M task
-* If a task answers yes to more then 6 of the following questions it was deemed an L task
+* If a task answers yes to less then 3 of the following questions it was deemed an S task.
+* If a task answers yes to more then 3 but less then 6 of the following questions it was deemed an M task.
+* If a task answers yes to more then 6 of the following questions it was deemed an L task.
+
+
 
