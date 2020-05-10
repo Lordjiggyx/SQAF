@@ -35,11 +35,40 @@ Does the task.....
 6. require a test?
 7. include a loop?
 8. include extracting information from an element in a collection?
+9. include a method that takes in parameters
 
 
 * If a task answers yes to less then 3 of the following questions it was deemed an S task.
-* If a task answers yes to more then 3 but less then 6 of the following questions it was deemed an M task.
-* If a task answers yes to more then 6 of the following questions it was deemed an L task.
+* If a task answers yes to more then 3 but less then 7 of the following questions it was deemed an M task.
+* If a task answers yes to more then 7 of the following questions it was deemed an L task.
+
+### Tasks
+
+**Initial tasks and estimates**
+
+A list of the initial tasks and estimations.
+
+* Create new survey - S
+* Add a question to a survey - S
+* Get a list of all surveys - M
+* Get a survey by name - M
+* Creating a survey response - S
+* Adding an answer to a survey response - S
+* Getting all survey responses associated with a specific survey - L
+* Get average deviation - L
+* Get standard deviation - L
+* Get maximum score of a survey - L
+* Get minimum score of a survey - L
+* Get standard deviation for a specific question on a survey- L
+* Get maximum score for a specific question on a survey- L
+* Get minimum score for a specific question on a survey- L
+
+**Additional Tasks**
+
+A list of any additional tasks that i decided to do
+
+
+
 
 
 
