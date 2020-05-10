@@ -37,7 +37,7 @@ My checklist included the following:
 
 #### Modifications
 
-** Briefly describe the changes made**
+**Briefly describe the changes made**
 
 #### Verification of change
 
