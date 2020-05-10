@@ -13,3 +13,15 @@ This assignment requires me to also have the following sections :
 * A section detailing a code coverage tool that I selected, why I selected it and how I used the tool
 
 * A pull review checklist detailing a number of checks that a reviewer other than myself would make in the process of making pull requests
+
+# Test coverage metric
+
+Test coverage is defined as a metric in Software Testing that measures the amount of testing performed by a set of test. It will include gathering information about which parts of a program are executed when running the test suite to determine which branches of conditional statements have been taken.
+
+### EclEmma
+
+EclEmma is the tool i chose for test coverage in my project , EclEmma is a free Java code coverage tool for Eclipse, available under the Eclipse Public License. It brings code coverage analysis directly into the Eclipse workbench it provides the following benefits
+
+1. Fast develop/test cycle: Launches from within the workbench like JUnit test runs can directly be analyzed for code coverage.
+2. Rich coverage analysis: Coverage results are immediately summarized and highlighted in the Java source code editors.
+3. Non-invasive: EclEmma does not require modifying your projects or performing any other setup.
