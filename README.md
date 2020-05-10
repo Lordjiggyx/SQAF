@@ -23,4 +23,21 @@ This sprint backlog contains a list of tasks and the corresponding estimation as
 
 To create estimations for my tasks I decided to go with what is known as "T-Shirt Sizing" this is a from of estimation used to size items in a sprint backlog. Items can be classified using t-shirt sizes (e.g. XS,S,M,L,XL). In this technique members of a team  would give each an item to size and at the end compare all estimates given. If all estimates are the same, that is considered as the ideal size, if not, then discuss among the team to arrive at the same estimate.
 
+Because this assignment was not a team effort I had to create my own criteria for determining the size of an item. To do this I decided to base my t-shirt sizes off the complexity of the code that was associated with a task, the criteria followed as such:
+
+Does the task.....
+
+1. have method/methods that return a value?
+2. include some sort of arithmetic operation?
+3. include iterating through a collection?
+4. include if/switch statements?
+5. include creating new objects?
+6. require a test?
+7. include a loop?
+8. include extracting information from an element in a collection?
+
+
+* If a task answers yes to less then 3 of the following questions it was deemed an S task
+* If a task answers yes to more then 3 but less then 6 of the following questions it was deemed an M task
+* If a task answers yes to more then 6 of the following questions it was deemed an L task
 
