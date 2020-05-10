@@ -14,13 +14,6 @@ public class Survey {
 	}
 	
 	
-	
-	
-	public void addQuestion(Question q)
-	{
-		this.questions.add(q);
-	}
-	
 	//Getters and setter for survey
 	public String getName() {
 		return name;
