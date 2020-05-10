@@ -13,3 +13,8 @@ This assignment requires me to also have the following sections :
 * A section detailing a code coverage tool that I selected, why I selected it and how I used the tool
 
 * A pull review checklist detailing a number of checks that a reviewer other than myself would make in the process of making pull requests
+
+
+# Test-Driven Development
+
+Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.
