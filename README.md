@@ -68,23 +68,9 @@ A list of the initial tasks and estimations.
 A list of any additional tasks that i decided to do
 
 
-**Velocity Metric Calculation**
-
-I decided to give each t-shirt size a corresponding numerical value S = 1 , M = 2 , L = 3
-
-To calculation of the velocity metric follows as:
-
-* get the number of tasks completed by t-shirt size e.g. [s:2 ,m:3, l:1]
-* multiply the number value of the tasks completed by the numerical value assigned to each t-shirt size e.g. [s:2x1, m:3x2, l:3x1] = [s:2, m:6, l:3]
-* get the sum of the numerical values calculated e.g. 2+6+1 = 9
-* divided the sum by 3 because there are 3 t-shirt sizes to get the velocity metric e.g. 9/3 = 3
-
-I would use this velocity metric to determine how fast the team is working in relation to the task sizes , the greater the number the more tasks getting completed.
-
-
 **Task Comparison**
 
-Two tasks that I will compare are
+Two tasks that I will compare are:
 
 1. Get average deviation of a survey
 2. Add a question to a survey
@@ -102,8 +88,20 @@ Two tasks that I will compare are
 | 9        	| Yes    	| No     	|
 | SUM      	| 7      	| 2      	|
 
-As we can see task one answers yes to 7 questions meaning the it is L while task 2 only answers yes to 2 meaning that it is small 
+As we can see task one answers yes to 7 questions meaning the it is L while task 2 only answers yes to 2 meaning that it is S 
 
+**Velocity Metric Calculation**
+
+I decided to give each t-shirt size a corresponding numerical value S = 1 , M = 2 , L = 3
+
+To calculation of the velocity metric follows as:
+
+* get the number of tasks completed by t-shirt size e.g. [s:2 ,m:3, l:1]
+* multiply the number value of the tasks completed by the numerical value assigned to each t-shirt size e.g. [s:2x1, m:3x2, l:3x1] = [s:2, m:6, l:3]
+* get the sum of the numerical values calculated e.g. 2+6+1 = 9
+* divided the sum by 3 because there are 3 t-shirt sizes to get the velocity metric e.g. 9/3 = 3
+
+I would use this velocity metric to determine how fast the team is working in relation to the task sizes , the greater the number the more tasks getting completed.
 
 
 
