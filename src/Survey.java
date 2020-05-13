@@ -97,4 +97,40 @@ public class Survey {
 		
 		
 	}
+	
+	public double getStandardDeviation()
+	{
+		//sum of question values
+		int total = 0;
+
+		//Looping through the values to get sum
+		for(Question q:this.questions)
+		{
+			total+= q.getAnswer();
+		}
+
+		//mean calculation
+		double mean = (float)total/this.questions.size();
+		
+		//Gathering of the square of each value 
+		ArrayList<Double> squares = new ArrayList<Double>();
+		for(Question q:this.questions)
+		{
+			double square = (q.getAnswer()-mean) *(q.getAnswer()-mean);
+			squares.add(square);
+		}
+		
+		//Total of squares
+		double totalsquaress = 0;
+		for(double d:squares)
+		{
+			totalsquaress+=d;
+		}
+		totalsquaress = totalsquaress/this.questions.size(); 
+		
+		//Standard deviation by getting square root of the sum of  squares
+		double stanDev = Math.sqrt(totalsquaress);
+		//rounded and returned 
+		return Math.round(stanDev* 100.0)/100.0;
+	}
 }
