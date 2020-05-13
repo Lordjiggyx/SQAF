@@ -6,6 +6,8 @@ public class Survey {
 	private String name;
 	//Collection to represent questions
 	private ArrayList<Question> questions = new ArrayList<Question>();
+	//Collection to represent survey responses
+	private ArrayList<surveyResponse> responses = new ArrayList<surveyResponse>();
 
 	//Empty Constructor just to show that class can be created
 	public Survey() 
@@ -45,21 +47,15 @@ public class Survey {
 		this.questions = questions;
 	}
 	
-	//Method to create a list of the repsonses for each question in the surevy
-	public ArrayList<Integer> getResponses()
+	//Method to return each surevy response
+	public ArrayList<surveyResponse> getResponses()
 	{
-		//List to represent the values of each question response
-		ArrayList<Integer> responses = new ArrayList<Integer>();
-		
-		//Loop to go through ecah question in the survey object
-		for(Question q : this.questions)
-		{
-			int value = q.getResponse().getAnswer();
-			responses.add(value);
-		}
-		
-		//return the repsonse values
-		return responses;
+		return this.responses;
 	}
 
+	//Method to add a survey repsonse object to a surevy
+	public void addResponse(surveyResponse sr)
+	{
+		this.responses.add(sr);
+	}
 }
