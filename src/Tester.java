@@ -102,12 +102,46 @@ public class Tester {
 		//Creation of question objwct
 		Question one = new Question("Food Quality");
 		//Set the answer value of the question
-		
 		//Exception returned meaning the test passed
 		one.setAnswer(7);
 		//A failure occurs when value is within 1-5 meaning an exception was not given
 		one.setAnswer(2);
 	}
+	
+	//Test to see if survey responses can be obtained from survey 
+		@Test
+		public void surveyResponse()
+		{
+			//Creation of a survey
+			Survey s = new Survey();
+
+			//Creation of question objectS
+			Question one = new Question("Customer Service");
+			Question two = new Question("Food Quality");
+
+			//adding answer to question response
+			one.setAnswer(2);
+			two.setAnswer(3);
+			//Questions being added to survey
+			s.add(one);
+			s.add(two);
+			
+			//Creating survey response
+			surveyResponse sr = new surveyResponse(s.getQuestions());
+			
+			//adding survey response to survey
+			s.addResponse(sr);
+
+			//exepected arralyist being returned
+			ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
+			
+			//Get the first survey response and the corresponding answers in the object
+			ArrayList<Integer> actual = s.getResponses().get(0).getResponses();
+			
+			//Test to see if the response lists match
+			assertEquals("ArrayList should equal [2,3]", expected , actual);
+
+		}
 
 	
 }
