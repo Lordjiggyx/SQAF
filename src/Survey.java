@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Survey {
 	
@@ -132,5 +133,19 @@ public class Survey {
 		double stanDev = Math.sqrt(totalsquaress);
 		//rounded and returned 
 		return Math.round(stanDev* 100.0)/100.0;
+	}
+	
+	public int getMaxium()
+	{
+		
+		int max = 0;
+		ArrayList<Integer> values = new ArrayList<Integer>();
+		
+		for(Question q : this.questions)
+		{
+			values.add(q.getAnswer());
+		}
+		max = Collections.max(values);
+		return max;
 	}
 }
