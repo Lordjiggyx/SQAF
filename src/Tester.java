@@ -71,81 +71,81 @@ public class Tester {
 	{		
 		//Creation of a new survey response object
 		surveyResponse sr = new surveyResponse();
-		assertTrue("Should be an object of type survey Response",sr instanceof Survey);
+		assertTrue("Should be an object of type survey Response",sr instanceof surveyResponse);
 	}
 
-	//Test to see that an answer to a surevy response is being added
-	@Test
-	public void responseAnswer()
-	{
-		//Creation of a new survey response object
-		surveyResponse sr = new surveyResponse();
-		//set an answer to the surevy response
-		sr.setAnswer(1);
-		assertNotNull("method should return a value thus proving that the answer attribute is not null" , sr.getAnswer());
-	}
-
-	//Test to see that the value is between 1-5
-	public void repsoneValue()
-	{
-		//Creation of a new survey response object
-		surveyResponse sr = new surveyResponse();
-		//set an answer to the surevy response
-		sr.setAnswer(1);
-		assertNull("should fail value is between 1-5 meaing that null is not being returned", sr.getAnswer());
-
-		sr.setAnswer(6);
-		assertNull("should pass value is greater than 1-5 meaning that null is returned", sr.getAnswer());
-
-		sr.setAnswer(-1);
-		assertNull("should pass value is greater than 1-5 meaning that null is returned", sr.getAnswer());
-
-	}
-
-	//Test to see if response can be obtained from question
-	@Test
-	public void questionResponse()
-	{
-		//Creation of a survey
-		Survey s = new Survey();
-
-		//Creation of question objectS
-		Question one = new Question("Customer Service");
-		
-
-		//adding answer to question response
-		one.getResponse().setAnswer(2);
-		
-
-		//test by getting the first questions response answer attribute
-		assertEquals("value should be 2",2,one.getResponse().getAnswer());
-
-	}
-
-
-	//Test to see if survey responses can be obtained from survey 
-	public void surveyResponse()
-	{
-		//Creation of a survey
-		Survey s = new Survey();
-
-		//Creation of question objectS
-		Question one = new Question("Customer Service");
-		Question two = new Question("Food Quality");
-
-		//adding answer to question response
-		one.getResponse().setAnswer(2);
-		two.getResponse().setAnswer(3);
-		//Questions being added to survey
-		s.add(one);
-		s.add(two);
-
-		//exepected arralyist being returned
-		ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
-		
-		//Test to see if the response lists match
-		assertArrayEquals("ArrayList should equal [2,3]", expected,s.getResponses());
-
-	}
+//	//Test to see that an answer to a surevy response is being added
+//	@Test
+//	public void responseAnswer()
+//	{
+//		//Creation of a new survey response object
+//		surveyResponse sr = new surveyResponse();
+//		//set an answer to the surevy response
+//		sr.setAnswer(1);
+//		assertNotNull("method should return a value thus proving that the answer attribute is not null" , sr.getAnswer());
+//	}
+//
+//	//Test to see that the value is between 1-5
+//	public void repsoneValue()
+//	{
+//		//Creation of a new survey response object
+//		surveyResponse sr = new surveyResponse();
+//		//set an answer to the surevy response
+//		sr.setAnswer(1);
+//		assertNull("should fail value is between 1-5 meaing that null is not being returned", sr.getAnswer());
+//
+//		sr.setAnswer(6);
+//		assertNull("should pass value is greater than 1-5 meaning that null is returned", sr.getAnswer());
+//
+//		sr.setAnswer(-1);
+//		assertNull("should pass value is greater than 1-5 meaning that null is returned", sr.getAnswer());
+//
+//	}
+//
+//	//Test to see if response can be obtained from question
+//	@Test
+//	public void questionResponse()
+//	{
+//		//Creation of a survey
+//		Survey s = new Survey();
+//
+//		//Creation of question objectS
+//		Question one = new Question("Customer Service");
+//		
+//
+//		//adding answer to question response
+//		one.getResponse().setAnswer(2);
+//		
+//
+//		//test by getting the first questions response answer attribute
+//		assertEquals("value should be 2",2,one.getResponse().getAnswer());
+//
+//	}
+//
+//
+//	//Test to see if survey responses can be obtained from survey 
+//	public void surveyResponse()
+//	{
+//		//Creation of a survey
+//		Survey s = new Survey();
+//
+//		//Creation of question objectS
+//		Question one = new Question("Customer Service");
+//		Question two = new Question("Food Quality");
+//
+//		//adding answer to question response
+//		one.getResponse().setAnswer(2);
+//		two.getResponse().setAnswer(3);
+//		//Questions being added to survey
+//		s.add(one);
+//		s.add(two);
+//
+//		//exepected arralyist being returned
+//		ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
+//		
+//		//Test to see if the response lists match
+//		assertArrayEquals("ArrayList should equal [2,3]", expected,s.getResponses());
+//
+//	}
 
 }
