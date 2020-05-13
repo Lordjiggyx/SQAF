@@ -74,17 +74,17 @@ public class Tester {
 		assertTrue("Should be an object of type survey Response",sr instanceof surveyResponse);
 	}
 
-//	//Test to see that an answer to a surevy response is being added
-//	@Test
-//	public void responseAnswer()
-//	{
-//		//Creation of a new survey response object
-//		surveyResponse sr = new surveyResponse();
-//		//set an answer to the surevy response
-//		sr.setAnswer(1);
-//		assertNotNull("method should return a value thus proving that the answer attribute is not null" , sr.getAnswer());
-//	}
-//
+	//Test to see that an answer to a surevy response is being added
+	@Test
+	public void responseAnswer()
+	{
+		//Creation of a new survey response object
+		surveyResponse sr = new surveyResponse();
+		//set an answer to the surevy response
+		sr.setAnswer(1);
+		assertEquals("method should return a value thus proving that the answer attribute is not 0" ,1, sr.getAnswer());
+	}
+
 //	//Test to see that the value is between 1-5
 //	public void repsoneValue()
 //	{
