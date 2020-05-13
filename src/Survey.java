@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 
 public class Survey {
@@ -57,5 +58,43 @@ public class Survey {
 	public void addResponse(surveyResponse sr)
 	{
 		this.responses.add(sr);
+	}
+	
+	public double getAverageDeviation()
+	{
+		//sum of question values
+		int total = 0;
+		
+		//Looping through the values to get sum
+		for(Question q:this.questions)
+		{
+			total+= q.getAnswer();
+		}
+		
+		//mean calculation
+		double mean = (float)total/this.questions.size();
+
+		//Gathering of absoulute deviations
+		ArrayList<Double> absoultedev = new ArrayList<Double>();
+		for(Question q:this.questions)
+		{
+			double abs = Math.abs(q.getAnswer() - mean);
+			absoultedev.add(abs);
+		}
+		
+		//absoulute devaiation
+		double totalabs = 0;
+		for(double d:absoultedev)
+		{
+			totalabs+=d;
+		}
+		
+		//average deviation
+		double aveDev = Math.round((float)totalabs/this.questions.size() * 100.0)/100.0;
+		
+		return Double.valueOf(aveDev);
+		
+		
+		
 	}
 }
