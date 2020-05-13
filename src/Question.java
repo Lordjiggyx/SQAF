@@ -29,10 +29,10 @@ public class Question {
 
 	public void setAnswer(int answer) {
 		
-		//if the answer value passed in is less than 1 0r greater then 5 then the value us set to 0
+		//if the answer value passed in is less than 1 0r greater then 5 then an exception is given
 		if(answer < 1 || answer > 5)
 		{
-			this.answer=0;
+			 throw new IllegalArgumentException("Value must be between 1 and 5" + answer );
 		}
 		//if answer value passed in is between 1-5 the answer is set to the passed in value
 		else
