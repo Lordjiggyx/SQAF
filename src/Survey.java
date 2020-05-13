@@ -138,14 +138,36 @@ public class Survey {
 	public int getMaxium()
 	{
 		
+		//value to represent max
 		int max = 0;
+		//list for all the values from each question
 		ArrayList<Integer> values = new ArrayList<Integer>();
 		
+		//adding question answer to list
 		for(Question q : this.questions)
 		{
 			values.add(q.getAnswer());
 		}
+		//getting the max value and retunring it
 		max = Collections.max(values);
 		return max;
+	}
+	
+	public int getMinimum()
+	{
+		int min = 0;
+		//value to represent 
+		ArrayList<Integer> values = new ArrayList<Integer>();
+		//list for all the values from each question
+
+		//adding question answer to list
+
+		for(Question q : this.questions)
+		{
+			values.add(q.getAnswer());
+		}
+		//getting the min value and retunring it
+		min = Collections.min(values);
+		return min;
 	}
 }

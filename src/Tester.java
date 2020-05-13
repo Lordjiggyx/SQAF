@@ -237,5 +237,34 @@ public class Tester {
 				assertEquals("maximum value should be 5", 5 , s.getMaxium());
 	}
 	
+	//Test for the min score in a survey
+	@Test
+	public void minSurvey()
+	{
+		//Creation of question objectS
+				Question one = new Question("Customer Service");
+				one.setAnswer(3);
+				Question two = new Question("Food Quality");
+				two.setAnswer(3);
+				Question three = new Question("Food Quality");
+				three.setAnswer(3);
+				Question four = new Question("Food Quality");
+				four.setAnswer(4);
+				Question five = new Question("Food Quality");
+				five.setAnswer(5);
+			
+				
+
+				//Creation of survey class with just name
+				Survey s = new Survey("My Questions");
+				//adding questions to the surevy
+				s.add(one);
+				s.add(two);
+				s.add(three);
+				s.add(four);
+				s.add(five);
+
+				assertEquals("maximum value should be 3", 3 , s.getMinimum());
+	}
 	
 }
