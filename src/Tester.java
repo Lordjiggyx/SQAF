@@ -122,29 +122,30 @@ public class Tester {
 	}
 
 
-//	//Test to see if survey responses can be obtained from survey 
-//	public void surveyResponse()
-//	{
-//		//Creation of a survey
-//		Survey s = new Survey();
-//
-//		//Creation of question objectS
-//		Question one = new Question("Customer Service");
-//		Question two = new Question("Food Quality");
-//
-//		//adding answer to question response
-//		one.getResponse().setAnswer(2);
-//		two.getResponse().setAnswer(3);
-//		//Questions being added to survey
-//		s.add(one);
-//		s.add(two);
-//
-//		//exepected arralyist being returned
-//		ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
-//		
-//		//Test to see if the response lists match
-//		assertArrayEquals("ArrayList should equal [2,3]", expected,s.getResponses());
-//
-//	}
+	//Test to see if survey responses can be obtained from survey 
+	@Test
+	public void surveyResponse()
+	{
+		//Creation of a survey
+		Survey s = new Survey();
+
+		//Creation of question objectS
+		Question one = new Question("Customer Service");
+		Question two = new Question("Food Quality");
+
+		//adding answer to question response
+		one.getResponse().setAnswer(2);
+		two.getResponse().setAnswer(3);
+		//Questions being added to survey
+		s.add(one);
+		s.add(two);
+
+		//exepected arralyist being returned
+		ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
+		
+		//Test to see if the response lists match
+		assertEquals("ArrayList should equal [2,3]", expected,s.getResponses());
+
+	}
 
 }
