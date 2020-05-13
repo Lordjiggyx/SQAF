@@ -85,23 +85,24 @@ public class Tester {
 		assertEquals("method should return a value thus proving that the answer attribute is not 0" ,1, sr.getAnswer());
 	}
 
-//	//Test to see that the value is between 1-5
-//	public void repsoneValue()
-//	{
-//		//Creation of a new survey response object
-//		surveyResponse sr = new surveyResponse();
-//		//set an answer to the surevy response
-//		sr.setAnswer(1);
-//		assertNull("should fail value is between 1-5 meaing that null is not being returned", sr.getAnswer());
-//
-//		sr.setAnswer(6);
-//		assertNull("should pass value is greater than 1-5 meaning that null is returned", sr.getAnswer());
-//
-//		sr.setAnswer(-1);
-//		assertNull("should pass value is greater than 1-5 meaning that null is returned", sr.getAnswer());
-//
-//	}
-//
+	//Test to see that the value is between 1-5
+	@Test
+	public void repsoneValue()
+	{
+		//Creation of a new survey response object
+		surveyResponse sr = new surveyResponse();
+		//set an answer to the surevy response
+		sr.setAnswer(1);
+		assertEquals("should pass value is between 1-5 meaing that 0 is not being returned",1, sr.getAnswer());
+
+		sr.setAnswer(6);
+		assertEquals("should pass value is greater than 1-5 meaning that 0 is returned", 0, sr.getAnswer());
+
+		sr.setAnswer(-1);
+		assertEquals("should pass value is less than 1-5 meaning that 0 is returned", 0,sr.getAnswer());
+
+	}
+
 //	//Test to see if response can be obtained from question
 //	@Test
 //	public void questionResponse()
