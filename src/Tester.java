@@ -83,6 +83,16 @@ public class Tester {
 		surveyResponse sr = new surveyResponse(s.getQuestions());
 		assertTrue("Should be an object of type survey Response",sr instanceof surveyResponse);
 	}
+	//Test for a question answer
+	@Test
+	public void questionAnswer()
+	{
+		//Creation of question objwct
+		Question one = new Question("Food Quality");
+		//Set the answer value of the question
+		one.setAnswer(1);
+		assertEquals("method should return a value thus proving that the answer attribute is not 0" ,1, one.getAnswer());
+	}
 
 	
 }
