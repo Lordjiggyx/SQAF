@@ -103,27 +103,25 @@ public class Tester {
 
 	}
 
-//	//Test to see if response can be obtained from question
-//	@Test
-//	public void questionResponse()
-//	{
-//		//Creation of a survey
-//		Survey s = new Survey();
-//
-//		//Creation of question objectS
-//		Question one = new Question("Customer Service");
-//		
-//
-//		//adding answer to question response
-//		one.getResponse().setAnswer(2);
-//		
-//
-//		//test by getting the first questions response answer attribute
-//		assertEquals("value should be 2",2,one.getResponse().getAnswer());
-//
-//	}
-//
-//
+	//Test to see if response can be obtained from question
+	@Test
+	public void questionResponse()
+	{
+
+		//Creation of question objectS
+		Question one = new Question("Customer Service");
+		
+
+		//adding answer to question response
+		one.getResponse().setAnswer(2);
+		
+
+		//test by getting the first questions response answer attribute
+		assertEquals("value should be 2",2,one.getResponse().getAnswer());
+
+	}
+
+
 //	//Test to see if survey responses can be obtained from survey 
 //	public void surveyResponse()
 //	{
