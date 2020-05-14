@@ -11,27 +11,20 @@ import org.junit.Test;
 
 public class Tester {
 
-	//Test to create an empty survey
-	@Test
+	//Create an empty survey
 	public Survey createSurveyEmpty()
 	{		
 		Survey s = new Survey();
 		return s;
 	}
 
-	//Test to create a survey with a name and questions
-	@Test
-	public void createSurvey()
+	//create a survey with populated questions
+	public Survey createSurvey(ArrayList<Question> inputQuestions)
 	{		
-		//Creation of question object
-		Question one = new Question("Customer Service");
-		//Collection to represent questions
-		ArrayList<Question> questions = new ArrayList<Question>();
-		//adding question to list
-		questions.add(one);
 
+		ArrayList<Question> questions = inputQuestions;
 		Survey s = new Survey("My Questions" ,questions);
-		assertTrue("Should be an object of type survey",s instanceof Survey);
+		return s;
 	}
 
 	//Test to see if collection of questions exists within survey object
