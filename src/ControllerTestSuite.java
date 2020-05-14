@@ -1,3 +1,4 @@
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -28,6 +29,15 @@ public class ControllerTestSuite {
 		Survey s = test.createSurvey(questions);
 		assertTrue("Should be an object of type survey", s instanceof Survey);
 
+	}
+	
+	@Test 
+	public void addQuestion()
+	{
+		
+		Survey s = test.createSurveyEmpty();
+		Question one = new Question("Customer Service");
+		assertEquals("Length of questions array should be 1",1 ,test.addQuestion(one, s));
 	}
 	
 }

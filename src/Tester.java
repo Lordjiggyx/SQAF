@@ -42,21 +42,18 @@ public class Tester {
 		assertTrue("Should be an object of type arralylist",s.getQuestions() instanceof ArrayList);
 	}
 
-	//Test to check that questions are being added to the survey
-	@Test
-	public void addQuestion()
+	//check to see that item has been added and survey has a list returns length of the arraylist
+	public int addQuestion(Question q , Survey surv)
 	{
 		//Creation of question objectS
-		Question one = new Question("Customer Service");
-		Question two = new Question("Food Quality");
-
+		Question one = q;
 		//Creation of survey class with just name
-		Survey s = new Survey("My Questions");
+		Survey s = surv;
 		//adding questions to the surevy
 		s.add(one);
-		s.add(two);
+		
+		return s.getQuestions().size();
 
-		assertEquals("Length of questions array should be 2",2 ,s.getQuestions().size());
 	}
 
 	//Test to check that survey response class is created
