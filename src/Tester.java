@@ -13,10 +13,10 @@ public class Tester {
 
 	//Test to create an empty survey
 	@Test
-	public void createSurveyEmpty()
+	public Survey createSurveyEmpty()
 	{		
 		Survey s = new Survey();
-		assertTrue("Should be an object of type survey",s instanceof Survey);
+		return s;
 	}
 
 	//Test to create a survey with a name and questions
