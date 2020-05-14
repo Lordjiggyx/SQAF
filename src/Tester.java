@@ -75,102 +75,27 @@ public class Tester {
 	
 
 	
-	//Test to see if survey responses can be obtained from survey 
-	@Test
-	public void surveyResponse()
+	
+	public ArrayList<Integer> surveyResponse(Survey s)
 		{
-			//Creation of a survey
-			Survey s = new Survey();
-
-			//Creation of question objectS
-			Question one = new Question("Customer Service");
-			Question two = new Question("Food Quality");
-
-			//adding answer to question response
-			one.setAnswer(2);
-			two.setAnswer(3);
-			//Questions being added to survey
-			s.add(one);
-			s.add(two);
-			
-			//Creating survey response
-			surveyResponse sr = new surveyResponse(s.getQuestions());
-			
-			//adding survey response to survey
-			s.addResponse(sr);
-
-			//exepected arralyist being returned
-			ArrayList<Integer> expected = new ArrayList<Integer>(Arrays.asList(2,3));
-			
 			//Get the first survey response and the corresponding answers in the object
 			ArrayList<Integer> actual = s.getResponses().get(0).getResponses();
-			
-			//Test to see if the response lists match
-			assertEquals("ArrayList should equal [2,3]", expected , actual);
+			return actual;
 
 		}
 
 	//Test to get average deviation of a survey
 	@Test
-	public void aveDev()
+	public double aveDev(Survey s)
 	{		
-		//Creation of question objectS
-		Question one = new Question("Customer Service");
-		one.setAnswer(3);
-		Question two = new Question("Food Quality");
-		two.setAnswer(1);
-		Question three = new Question("Food Quality");
-		three.setAnswer(3);
-		Question four = new Question("Food Quality");
-		four.setAnswer(4);
-		Question five = new Question("Food Quality");
-		five.setAnswer(5);
-	
-		
-
-		//Creation of survey class with just name
-		Survey s = new Survey("My Questions");
-		//adding questions to the surevy
-		s.add(one);
-		s.add(two);
-		s.add(three);
-		s.add(four);
-		s.add(five);
-
-		//Have to pass in delta which is the maximum delta between expected and actual for which both numbers are still considered equal.
-		assertEquals("average Deviation should be 1.04", 1.04 , s.getAverageDeviation() ,1e-15);
-
+		return s.getAverageDeviation();
 	}
 	
 	//Test for the standard deviation
 	@Test
-	public void standardDeviation()
+	public double standardDeviation(Survey s)
 	{
-		//Creation of question objectS
-				Question one = new Question("Customer Service");
-				one.setAnswer(3);
-				Question two = new Question("Food Quality");
-				two.setAnswer(1);
-				Question three = new Question("Food Quality");
-				three.setAnswer(3);
-				Question four = new Question("Food Quality");
-				four.setAnswer(4);
-				Question five = new Question("Food Quality");
-				five.setAnswer(5);
-			
-				
-
-				//Creation of survey class with just name
-				Survey s = new Survey("My Questions");
-				//adding questions to the surevy
-				s.add(one);
-				s.add(two);
-				s.add(three);
-				s.add(four);
-				s.add(five);
-
-				//Have to pass in delta which is the maximum delta between expected and actual for which both numbers are still considered equal.
-				assertEquals("standard Deviation should be 1.33", 1.33 , s.getStandardDeviation() ,1e-15);
+		return s.getStandardDeviation();
 	}
 	
 	//Test for the max score in a survey
