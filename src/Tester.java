@@ -106,17 +106,19 @@ public class Tester {
 		return s.StandardDeviationQuestion(index);
 	}
 	
+	//max score of a question
 	public int maxQuestion(Survey s , int index)
 	{
 		return s.getMaxiumQuestion(index);
 		
 	}
-	
+	//min score of a question
 	public int minQuestion(Survey s , int index)
 	{
 		return s.getMinimumQuestion(index);
 	}
 	
+	//get survey by name
 	public Survey getSurvey(ArrayList<Survey> surveys , String name)
 	{
 		Survey returning = new Survey("WRONG SURVEY");
@@ -131,6 +133,7 @@ public class Tester {
 		return returning;
 	}
 	
+	//get responses of a specific survey
 	public ArrayList<surveyResponse> ResponsebySurveyName(ArrayList<Survey> surveys , String name)
 	{
 		ArrayList<surveyResponse> responses = null;
