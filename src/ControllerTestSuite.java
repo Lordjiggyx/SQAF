@@ -475,4 +475,76 @@ public class ControllerTestSuite {
 		
 		assertEquals("Name of survey returned should be survey 2", "Survey 2" , tester.getName());
 	}
+	
+	@Test
+	public void surveyResponseBySurveyName()
+	{
+		Survey s1 = new Survey("Survey 1");
+		
+		Question one = new Question("Customer Service");
+		one.setAnswer(1);
+		Question two = new Question("Food Quality");
+		two.setAnswer(2);
+		
+		s1.add(one);
+		s1.add(two);
+		
+		
+		//Simiulating a different set of answers for the same questions in the survey
+		ArrayList<Question> questions1 = new ArrayList<Question>();
+		//Keeps the names of the questions in the survey 
+		for(Question q :s1.getQuestions() )
+		{
+			//new question with name of questions from the survey
+			Question nq = new Question(q.getQuestion());
+			//mimics a change in answer value
+			nq.setAnswer(5);
+			//added to a list to represent the questions with different value answers
+			questions1.add(nq);
+		}
+		
+		surveyResponse sr = new surveyResponse(s1.getQuestions());
+		surveyResponse sr1 = new surveyResponse(questions1);
+		
+		s1.addResponse(sr);
+		s1.addResponse(sr1);
+		
+		
+		Survey s2 = new Survey("Survey 2");
+		
+		Question three = new Question("Friednliness");
+		three.setAnswer(3);
+		Question four = new Question("Aniaml Quality");
+		four.setAnswer(1);
+		
+		s2.add(three);
+		s2.add(four);
+		
+		
+		
+		
+		surveyResponse sr3 = new surveyResponse(s2.getQuestions());
+
+		s2.addResponse(sr3);
+		
+		ArrayList<Survey> surveys = new ArrayList<Survey>();
+		surveys.add(s1);
+		surveys.add(s2);
+		
+		ArrayList<Integer> expected1 = new ArrayList<Integer>(Arrays.asList(1,2));
+		ArrayList<Integer> expected2 = new ArrayList<Integer>(Arrays.asList(5,5));
+		ArrayList<Integer> expected3 = new ArrayList<Integer>(Arrays.asList(3,1));
+
+		
+		assertEquals("Survey 1 Response 1 should be [1,2]",expected1 , test.ResponsebySurveyName(surveys, "Survey 1").get(0).getResponses());
+		assertEquals("Survey 1 Response 2 should be [5,5]",expected2 ,  test.ResponsebySurveyName(surveys, "Survey 1").get(1).getResponses());
+		
+		assertEquals("Survey 1 Response 1 should be [3,1]",expected3 ,  test.ResponsebySurveyName(surveys, "Survey 2").get(0).getResponses());
+
+		
+		
+		
+		
+	}
+	
 }

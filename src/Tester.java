@@ -119,7 +119,7 @@ public class Tester {
 	
 	public Survey getSurvey(ArrayList<Survey> surveys , String name)
 	{
-		Survey returning = null;
+		Survey returning = new Survey("WRONG SURVEY");
 		for(Survey s: surveys)
 		{
 			if(s.getName().equals(name))
@@ -129,5 +129,19 @@ public class Tester {
 
 		}
 		return returning;
+	}
+	
+	public ArrayList<surveyResponse> ResponsebySurveyName(ArrayList<Survey> surveys , String name)
+	{
+		ArrayList<surveyResponse> responses = null;
+		for(Survey s: surveys)
+		{
+			if(s.getName().equals(name))
+			{
+				responses= s.getResponses();
+			}
+
+		}
+		return responses;
 	}
 }
