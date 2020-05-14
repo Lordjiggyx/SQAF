@@ -170,4 +170,40 @@ public class Survey {
 		min = Collections.min(values);
 		return min;
 	}
+	
+	public double averageDeviationQuestion(int index)
+	{
+		//sum of question values
+		int total = 0;
+		
+		for(surveyResponse sr: this.responses)
+		{
+			//adds the values of the questions that have been selected
+			total+= sr.questions.get(index).getAnswer();
+		}
+
+		//mean calculation
+		double mean = (float)total/this.responses.size();
+	
+		//Gathering of absoulute deviations
+		ArrayList<Double> absoultedev = new ArrayList<Double>();
+		for(surveyResponse sr: this.responses)
+		{
+			double abs = Math.abs(sr.questions.get(index).getAnswer() - mean);
+			absoultedev.add(abs);
+		}
+
+		//absoulute devaiation
+		double totalabs = 0;
+		for(double d:absoultedev)
+		{
+			totalabs+=d;
+		}
+
+		//average deviation
+		double aveDev = Math.round((float)totalabs/this.responses.size() * 100.0)/100.0;
+
+		return Double.valueOf(aveDev);
+		
+	}
 }
