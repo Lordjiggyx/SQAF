@@ -398,6 +398,7 @@ public class ControllerTestSuite {
 	
 	@Test
 	public void minimumScoreQuestion()
+
 	{
 		//Creation od questions and setting answer values
 		Question one = new Question("Customer Service");
@@ -454,5 +455,24 @@ public class ControllerTestSuite {
 		
 		assertEquals("min repsonse for question 1 should be 1", 1 , test.minQuestion(s , 0));
 		
+	}
+	
+	@Test
+	public void SurveyByName()
+	{
+		Survey s1 = new Survey("Survey 1");
+		Survey s2 = new Survey("Survey 2");
+		Survey s3 = new Survey("Survey 3");
+		Survey s4 = new Survey("Survey 4");
+		
+		ArrayList<Survey> surveys = new ArrayList<Survey>();
+		surveys.add(s1);
+		surveys.add(s2);
+		surveys.add(s3);
+		surveys.add(s4);
+		
+		Survey tester = test.getSurvey(surveys, "Survey 2");
+		
+		assertEquals("Name of survey returned should be survey 2", "Survey 2" , tester.getName());
 	}
 }

@@ -11,6 +11,7 @@ import org.junit.Test;
 
 public class Tester {
 
+	
 	//Create an empty survey
 	public Survey createSurveyEmpty()
 	{		
@@ -18,7 +19,7 @@ public class Tester {
 		return s;
 	}
 
-	//create a survey with populated questions
+	//create a survey with questions
 	public Survey createSurvey(ArrayList<Question> inputQuestions)
 	{		
 
@@ -105,16 +106,28 @@ public class Tester {
 		return s.StandardDeviationQuestion(index);
 	}
 	
-	@Test
 	public int maxQuestion(Survey s , int index)
 	{
 		return s.getMaxiumQuestion(index);
 		
 	}
 	
-	@Test
 	public int minQuestion(Survey s , int index)
 	{
 		return s.getMinimumQuestion(index);
+	}
+	
+	public Survey getSurvey(ArrayList<Survey> surveys , String name)
+	{
+		Survey returning = null;
+		for(Survey s: surveys)
+		{
+			if(s.getName().equals(name))
+			{
+				returning= s;
+			}
+
+		}
+		return returning;
 	}
 }
