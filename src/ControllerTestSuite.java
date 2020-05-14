@@ -40,4 +40,18 @@ public class ControllerTestSuite {
 		assertEquals("Length of questions array should be 1",1 ,test.addQuestion(one, s));
 	}
 	
+	@Test 
+	public void surveyResponseCreationTest()
+	{
+		Survey s = test.createSurveyEmpty();
+		Question one = new Question("Customer Service");
+		Question two = new Question("Food Quality");
+		s.add(one);
+		s.add(two);
+		
+		surveyResponse sr = test.createSurveyResponse(s);
+		assertTrue("Should be an object of type survey Response",sr instanceof surveyResponse);
+
+	}
+	
 }

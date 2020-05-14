@@ -56,23 +56,11 @@ public class Tester {
 
 	}
 
-	//Test to check that survey response class is created
-	@Test
-	public void createSurveyResponse()
+	public surveyResponse createSurveyResponse(Survey surv)
 	{		
-		//Creation of question objectS
-		Question one = new Question("Customer Service");
-		Question two = new Question("Food Quality");
-
-		//Creation of survey class with just name
-		Survey s = new Survey("My Questions");
-		//adding questions to the surevy
-		s.add(one);
-		s.add(two);
-		
 		//Creation of a new survey response object
-		surveyResponse sr = new surveyResponse(s.getQuestions());
-		assertTrue("Should be an object of type survey Response",sr instanceof surveyResponse);
+		surveyResponse sr = new surveyResponse(surv.getQuestions());
+		return sr;
 	}
 	
 	//Test for a question answer
