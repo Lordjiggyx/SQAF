@@ -243,4 +243,42 @@ public class Survey {
 		//rounded and returned 
 		return Math.round(stanDev* 100.0)/100.0;
 	}
+	
+	
+	public int getMaxiumQuestion(int index)
+	{
+		
+		//value to represent max
+		int max = 0;
+		//list for all the values from each question
+		ArrayList<Integer> values = new ArrayList<Integer>();
+		
+		//adding question answer to list
+		for(surveyResponse sr: this.responses)
+		{
+			values.add(sr.questions.get(index).getAnswer());
+		}
+		//getting the max value and retunring it
+		max = Collections.max(values);
+		return max;
+	}
+	
+	public int getMinimumQuestion(int index)
+	{
+		int min = 0;
+		//value to represent 
+		ArrayList<Integer> values = new ArrayList<Integer>();
+		//list for all the values from each question
+
+		//adding question answer to list
+
+		for(surveyResponse sr: this.responses)
+		{
+			values.add(sr.questions.get(index).getAnswer());
+		}
+		//getting the min value and retunring it
+		min = Collections.min(values);
+		return min;
+	}
+	
 }
