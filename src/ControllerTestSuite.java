@@ -1,4 +1,5 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
@@ -53,5 +54,23 @@ public class ControllerTestSuite {
 		assertTrue("Should be an object of type survey Response",sr instanceof surveyResponse);
 
 	}
+	
+	@Test 
+	public void questionAnswer()
+	{
+		Question one = new Question("Food Quality");
+		test.questionAnswer(one);
+		assertEquals("method should return a value thus proving that the answer attribute is not 0" ,1, one.getAnswer());
+
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void questionAnswerValue()
+	{
+		Question one = new Question("Food Quality");
+		one.setAnswer(-1);
+		
+	}
+	
 	
 }

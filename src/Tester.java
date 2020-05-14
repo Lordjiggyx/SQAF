@@ -63,29 +63,17 @@ public class Tester {
 		return sr;
 	}
 	
-	//Test for a question answer
-	@Test
-	public void questionAnswer()
+
+	public int questionAnswer(Question q)
 	{
 		//Creation of question objwct
-		Question one = new Question("Food Quality");
+		Question one = q;
 		//Set the answer value of the question
 		one.setAnswer(1);
-		assertEquals("method should return a value thus proving that the answer attribute is not 0" ,1, one.getAnswer());
+		return one.getAnswer();
 	}
 	
-	//Test to see if thw question answer value is between 1-5
-	@Test(expected = IllegalArgumentException.class)
-	public void questionAnswerValue()
-	{
-		//Creation of question objwct
-		Question one = new Question("Food Quality");
-		//Set the answer value of the question
-		//Exception returned meaning the test passed
-		one.setAnswer(7);
-		//A failure occurs when value is within 1-5 meaning an exception was not given
-		one.setAnswer(2);
-	}
+
 	
 	//Test to see if survey responses can be obtained from survey 
 	@Test
