@@ -358,5 +358,39 @@ public class Survey {
 		return Math.round(stanDev* 100.0)/100.0;
 	}
 	
+	public int getMaximumSurvey()
+	{
+		//value to represent max
+		int max = 0;
+		//list for all the values from each question
+		ArrayList<Integer> values = new ArrayList<Integer>();
+		
+		//adding question answer to list
+		for(surveyResponse sr : this.getResponses())
+		{
+			values.add(sr.getResponsesSum());
+		}
+		//getting the max value and retunring it
+		max = Collections.max(values);
+		return max;
+	}
+	
+	public int getMinimumSurvey()
+	{
+		//value to represent max
+		int max = 0;
+		//list for all the values from each question
+		ArrayList<Integer> values = new ArrayList<Integer>();
+		
+		//adding question answer to list
+		for(surveyResponse sr : this.getResponses())
+		{
+			values.add(sr.getResponsesSum());
+		}
+		//getting the max value and retunring it
+		max = Collections.min(values);
+		return max;
+	}
+
 
 }
