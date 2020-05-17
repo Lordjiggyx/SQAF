@@ -319,5 +319,44 @@ public class Survey {
 		
 		return aveDev;
 	}
+	
+	
+	public double getSDSurveyResponses()
+	{
+		//sum of each sum from a surevy response
+		int total = 0;
+		
+		//iterates through each survey response in survey
+		for(surveyResponse sr : this.getResponses())
+		{
+			total+=sr.getResponsesSum();
+		}
+		
+		//mean calculation
+		double mean = (float)total/this.responses.size();
+		
+		//Gathering of the square of each value 
+		ArrayList<Double> squares = new ArrayList<Double>();
+		for(surveyResponse sr : this.getResponses())
+		{
+			//square the result of each sum minus the sum
+			double square = (sr.getResponsesSum()-mean) *(sr.getResponsesSum()-mean);
+			squares.add(square);
+		}
+		
+		//Total of squares
+		double totalsquaress = 0;
+		for(double d:squares)
+		{
+			totalsquaress+=d;
+		}
+		totalsquaress = totalsquaress/this.responses.size(); 
+		
+		//Standard deviation by getting square root of the sum of  squares
+		double stanDev = Math.sqrt(totalsquaress);
+		//rounded and returned 
+		return Math.round(stanDev* 100.0)/100.0;
+	}
+	
 
 }
