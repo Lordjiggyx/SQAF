@@ -43,3 +43,27 @@ Once this button has been clicked your workspace should should display the proje
 
 In the case of my project I have a high initial coverage of 94.7%, however this means that some pieces of code are not being executed or covered by tests. ECLEmma identifies pieces of code with 3 different colours: Red, Yellow , Green
 
+####Red
+
+<p align="center">
+<img src="./Images/image5.PNG" width="800">
+<p>
+
+As we can see the method setName is not executed at all thus EclEmma highlights it red and assigns it a coverage value of 0%, removing methods or block of code highlighted red will increase the overall coverage metric as it means less pieces of code not being used are present.
+
+####Yellow
+
+<p align="center">
+<img src="./Images/image6.PNG" width="800">
+<p>
+
+As we can see the method setAnswer has a coverage value of 100% however a piece of code is highlighted yellow, this means this piece of code is partially covered this means that there is another condition that could have been covered
+
+####Green
+
+<p align="center">
+<img src="./Images/image4.PNG" width="800">
+<p>
+
+Any line piece of code that has been highlighted green has been executed by tests and therefore has been covered.
+
