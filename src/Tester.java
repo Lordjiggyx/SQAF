@@ -221,7 +221,7 @@ public class Tester {
 //		System.out.println(s.getADSurveyResponses());
 		
 		//Test to get average Deviation
-		assertEquals("Average Deviation of Survey should be 1.5" ,1.5 , s.getADSurveyResponses()  ,1e-15);
+		assertEquals("Average Deviation of Survey should be 1.5" ,1.5 , s.getAverageDeviation()  ,1e-15);
 
 	}
 	
@@ -263,17 +263,17 @@ public class Tester {
 		s.addResponse(sr1);
 		
 		//Feel free to uncomment and check the responses sum for different surevy responses
-		//Sum = 7
-		System.out.println(s.getResponses().get(0).getResponsesSum());
-		
-		//Sum = 2
-		System.out.println(s.getResponses().get(1).getResponsesSum());
-		
-		//Use this link to check if the calculation is correct https://www.calculator.net/standard-deviation-calculator.html
-		System.out.println(s.getSDSurveyResponses());
+//		//Sum = 7
+//		System.out.println(s.getResponses().get(0).getResponsesSum());
+//		
+//		//Sum = 2
+//		System.out.println(s.getResponses().get(1).getResponsesSum());
+//		
+//		//Use this link to check if the calculation is correct https://www.calculator.net/standard-deviation-calculator.html
+//		System.out.println(s.getStandardDeviation());
 		
 		//Test to get standard Deviation
-		assertEquals("Standard Deviation of Survey should be 2.5" ,2.5 , s.getSDSurveyResponses()  ,1e-15);
+		assertEquals("Standard Deviation of Survey should be 2.5" ,2.5 , s.getStandardDeviation()  ,1e-15);
 
 	}
 	
@@ -316,15 +316,15 @@ public class Tester {
 		
 		//Feel free to uncomment and check the responses sum for different surevy responses
 		//Sum = 7
-		System.out.println(s.getResponses().get(0).getResponsesSum());
-		
-		//Sum = 2
-		System.out.println(s.getResponses().get(1).getResponsesSum());
-		
+//		System.out.println(s.getResponses().get(0).getResponsesSum());
+//		
+//		//Sum = 10
+//		System.out.println(s.getResponses().get(1).getResponsesSum());
+//		
 
 		
 		//Test to get standard Deviation
-		assertEquals("Maximum Score should be 10" ,10 , s.getMaximumSurvey());
+		assertEquals("Maximum Score should be 10" ,10 , s.getMaxium());
 	}
 	
 	@Test
@@ -365,15 +365,15 @@ public class Tester {
 		s.addResponse(sr1);
 		
 		//Feel free to uncomment and check the responses sum for different surevy responses
-		//Sum = 7
-		System.out.println(s.getResponses().get(0).getResponsesSum());
-		
-		//Sum = 2
-		System.out.println(s.getResponses().get(1).getResponsesSum());
+//		//Sum = 7
+//		System.out.println(s.getResponses().get(0).getResponsesSum());
+//		
+//		//Sum = 10
+//		System.out.println(s.getResponses().get(1).getResponsesSum());
 		
 
 		
 		//Test to get standard Deviation
-		assertEquals("minimum Score should be 7" ,7 , s.getMinimumSurvey());
+		assertEquals("minimum Score should be 7" ,7 , s.getMinimum());
 	}
 }
