@@ -25,3 +25,12 @@ EclEmma is the tool i chose for test coverage in my project , EclEmma is a free 
 1. Fast develop/test cycle: Launches from within the workbench like JUnit test runs can directly be analyzed for code coverage.
 2. Rich coverage analysis: Coverage results are immediately summarized and highlighted in the Java source code editors.
 3. Non-invasive: EclEmma does not require modifying your projects or performing any other setup.
+
+### How To Use
+This metric tool is actually built into the latest versions of eclipse meaning there is no need for any external downloads.
+
+This tool is used by clicking the 3rd run button in the eclipse menu
+
+<p align="center">
+<img src="../image1.PNG" width="400">
+<p>
