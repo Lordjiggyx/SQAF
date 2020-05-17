@@ -34,3 +34,12 @@ This tool is used by clicking the 3rd run button in the eclipse menu
 <p align="center">
 <img src="./Images/image1.PNG" width="400">
 <p>
+
+Once this button has been clicked your workspace should should display the project and the corresponding test coverage value when you click into each folder it displays the coverage percentage of each corresponding folder or file in the project , when you click into java flies it shows the corresponding methods and their coverage value
+
+<p align="center">
+<img src="./Images/image2.PNG" width="800">
+<p>
+
+In the case of my project I have a high initial coverage of 94.7%, however this means that some pieces of code are not being executed or covered by tests. ECLEmma identifies pieces of code with 3 different colours: Red, Yellow , Green
+
