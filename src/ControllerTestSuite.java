@@ -149,7 +149,7 @@ public class ControllerTestSuite {
 		//				System.out.println(s.getADSurveyResponses());
 
 		//Test to get average Deviation
-		assertEquals("Average Deviation of Survey should be 1.5" ,1.5 , test.standardDeviation(s) ,1e-15);
+		assertEquals("Average Deviation of Survey should be 1.5" ,1.5 , test.aveDev(s) ,1e-15);
 
 	}
 
@@ -301,7 +301,7 @@ public class ControllerTestSuite {
 
 
 		//Test to get standard Deviation
-		assertEquals("minimum Score should be 7" ,7 , s.getMinimum());
+		assertEquals("minimum Score should be 7" ,7 , test.minSurvey(s));
 	}
 
 	@Test

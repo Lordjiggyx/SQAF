@@ -39,16 +39,11 @@ public class Survey {
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public ArrayList<Question> getQuestions() {
 		return questions;
 	}
-	public void setQuestions(ArrayList<Question> questions) {
-		this.questions = questions;
-	}
-	
+
 	//Method to return each surevy response
 	public ArrayList<surveyResponse> getResponses()
 	{
