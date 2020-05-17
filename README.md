@@ -40,27 +40,27 @@ This branch is includes any final additional features/sections to the documentat
 
 the other branches in the project are created to add additional content to these 4 branches. each branch will be merged to one of the following four branches and then to the develop branch only upon project completion will the develop branch be merged to the master branch and a release branch will be created.
 
-List of branches created:
+ #### List of branches created:
 
-* TDD - Branch containing Test Driven Development content for documentation
+* **TDD** - Branch containing Test Driven Development content for documentation
 
-* SprintBacklog - Branch containing Sprint Backlog and task estimation  content for documentation
+* **SprintBacklog** - Branch containing Sprint Backlog and task estimation  content for documentation
 
-* MetricTool - Branch containing Test coverage content for documentation
+* **MetricTool** - Branch containing Test coverage content for documentation
 
-* VersionControl - Branch containing Team version control content for documentation
+* **VersionControl** - Branch containing Team version control content for documentation
 
-* ReviewChecklist - Branch containing Sprint Backlog content for documentation
+* **ReviewChecklist** - Branch containing Sprint Backlog content for documentation
 
-* Controller-DEV - building on all the pieces of code from the other branches this branch housed the controller and the test suite for the controller.
+* **Controller-DEV** - building on all the pieces of code from the other branches this branch housed the controller and the test suite for the controller.
 
-* Arithmetic1-DEV - Branch conatained the initial arithmetic operations that were corrected I had made a logical error in how i was conducting these operations which are explained in the [pull request](https://github.com/Lordjiggyx/SQAF/pull/7) related to this branch.
+* **Arithmetic1-DEV** - Branch conatained the initial arithmetic operations that were corrected I had made a logical error in how i was conducting these operations which are explained in the [pull request](https://github.com/Lordjiggyx/SQAF/pull/7) related to this branch.
 
-* Arithmetic-DEV - Branch conatained the initial arithmetic operations that were meant to be conducted on the survey class.
+* **Arithmetic-DEV** - Branch conatained the initial arithmetic operations that were meant to be conducted on the survey class.
 
-* Survey-DEV - Branch contained the initial code for the application with the creation of the survey and question classes including tests
+* **Survey-DEV** - Branch contained the initial code for the application with the creation of the survey and question classes including tests
 
-* sSurveyResponse-DEV - Branch contained the code related to the survey response class including tests
+* **SurveyResponse-DEV** - Branch contained the code related to the survey response class including tests
 
 
 
