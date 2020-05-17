@@ -32,5 +32,5 @@ This metric tool is actually built into the latest versions of eclipse meaning t
 This tool is used by clicking the 3rd run button in the eclipse menu
 
 <p align="center">
-<img src="../Images/image1.PNG" width="400">
+<img src="./Images/image1.PNG" width="400">
 <p>
