@@ -41,29 +41,38 @@ Once this button has been clicked your workspace should should display the proje
 <img src="./Images/image2.PNG" width="800">
 <p>
 
-In the case of my project I have a high initial coverage of 94.7%, however this means that some pieces of code are not being executed or covered by tests. ECLEmma identifies pieces of code with 3 different colours: Red, Yellow , Green
+In the case of my project I have a high initial coverage of 94.7%, however this means that some pieces of code are not being executed or covered by tests. ECLEmma identifies pieces of code with 3 different colours: Red, Yellow and Green
 
-####Red
+#### Red
 
 <p align="center">
-<img src="./Images/image5.PNG" width="800">
+<img src="./Images/Image5.PNG" width="800">
 <p>
 
 As we can see the method setName is not executed at all thus EclEmma highlights it red and assigns it a coverage value of 0%, removing methods or block of code highlighted red will increase the overall coverage metric as it means less pieces of code not being used are present.
 
-####Yellow
+#### Yellow
 
 <p align="center">
-<img src="./Images/image6.PNG" width="800">
+<img src="./Images/Image6.PNG" width="800">
 <p>
 
 As we can see the method setAnswer has a coverage value of 100% however a piece of code is highlighted yellow, this means this piece of code is partially covered this means that there is another condition that could have been covered
 
-####Green
+#### Green
 
 <p align="center">
-<img src="./Images/image4.PNG" width="800">
+<img src="./Images/Image4.PNG" width="800">
 <p>
 
 Any line piece of code that has been highlighted green has been executed by tests and therefore has been covered.
 
+### EclEmma Corrections
+
+As we can see in the original screenshot my project had a coverage score of 94.7% this meant that i needed to make a number of changes in order to increase this coverage metric
+
+<p align="center">
+<img src="./Images/image7.PNG" width="800">
+<p>
+
+After making changes in the following [commit](https://github.com/Lordjiggyx/SQAF/commit/ac5ac12ee3c9e62815f1dd24394938d7c085e7bb) We can see that the coverage metric for my project increased to 99.8%. I have never used this tool before and never understood what test coverage means after using it now i see the advantage of using this tool.
