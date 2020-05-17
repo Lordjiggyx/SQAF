@@ -59,13 +59,15 @@ A list of the initial tasks and estimations.
 * Get standard deviation of a survey - L
 * Get maximum score of a survey - L
 * Get minimum score of a survey - L
-* Get standard deviation for a specific question on a survey- L
-* Get maximum score for a specific question on a survey- L
-* Get minimum score for a specific question on a survey- L
+* Get standard deviation for a specific question on a survey - L
+* Get maximum score for a specific question on a survey - L
+* Get minimum score for a specific question on a survey - L
 
 **Additional Tasks**
+* Get the sum value of question answers in a survey response - L
+* Ensure a question answer value is between 1-5 - M
+* Get a list of all surveys - M
 
-A list of any additional tasks that i decided to do
 
 
 **Task Comparison**
