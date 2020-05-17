@@ -63,23 +63,26 @@ public class Survey {
 	
 	public double getAverageDeviation()
 	{
-		//sum of question values
+		//sum of each sum from a surevy response
 		int total = 0;
 		
-		//Looping through the values to get sum
-		for(Question q:this.questions)
+		//iterates through each survey response in survey
+		for(surveyResponse sr : this.getResponses())
 		{
-			total+= q.getAnswer();
+			total+=sr.getResponsesSum();
 		}
 		
+		
+		
 		//mean calculation
-		double mean = (float)total/this.questions.size();
-
+		double mean = (float)total/this.responses.size();
+		
 		//Gathering of absoulute deviations
 		ArrayList<Double> absoultedev = new ArrayList<Double>();
-		for(Question q:this.questions)
+		for(surveyResponse sr : this.getResponses())
 		{
-			double abs = Math.abs(q.getAnswer() - mean);
+			//must be absolute value
+			double abs = Math.abs(sr.getResponsesSum() - mean);
 			absoultedev.add(abs);
 		}
 		
@@ -90,45 +93,44 @@ public class Survey {
 			totalabs+=d;
 		}
 		
-		//average deviation
-		double aveDev = Math.round((float)totalabs/this.questions.size() * 100.0)/100.0;
+		double aveDev = Math.round((float)totalabs/this.responses.size() * 100.0)/100.0;
+
 		
-		return Double.valueOf(aveDev);
-		
-		
+		return aveDev;
 		
 	}
 	
 	public double getStandardDeviation()
 	{
-		//sum of question values
+		//sum of each sum from a surevy response
 		int total = 0;
 
-		//Looping through the values to get sum
-		for(Question q:this.questions)
+		//iterates through each survey response in survey
+		for(surveyResponse sr : this.getResponses())
 		{
-			total+= q.getAnswer();
+			total+=sr.getResponsesSum();
 		}
 
 		//mean calculation
-		double mean = (float)total/this.questions.size();
-		
+		double mean = (float)total/this.responses.size();
+
 		//Gathering of the square of each value 
 		ArrayList<Double> squares = new ArrayList<Double>();
-		for(Question q:this.questions)
+		for(surveyResponse sr : this.getResponses())
 		{
-			double square = (q.getAnswer()-mean) *(q.getAnswer()-mean);
+			//square the result of each sum minus the sum
+			double square = (sr.getResponsesSum()-mean) *(sr.getResponsesSum()-mean);
 			squares.add(square);
 		}
-		
+
 		//Total of squares
 		double totalsquaress = 0;
 		for(double d:squares)
 		{
 			totalsquaress+=d;
 		}
-		totalsquaress = totalsquaress/this.questions.size(); 
-		
+		totalsquaress = totalsquaress/this.responses.size(); 
+
 		//Standard deviation by getting square root of the sum of  squares
 		double stanDev = Math.sqrt(totalsquaress);
 		//rounded and returned 
@@ -142,11 +144,11 @@ public class Survey {
 		int max = 0;
 		//list for all the values from each question
 		ArrayList<Integer> values = new ArrayList<Integer>();
-		
+
 		//adding question answer to list
-		for(Question q : this.questions)
+		for(surveyResponse sr : this.getResponses())
 		{
-			values.add(q.getAnswer());
+			values.add(sr.getResponsesSum());
 		}
 		//getting the max value and retunring it
 		max = Collections.max(values);
@@ -155,20 +157,19 @@ public class Survey {
 	
 	public int getMinimum()
 	{
-		int min = 0;
-		//value to represent 
-		ArrayList<Integer> values = new ArrayList<Integer>();
+		//value to represent max
+		int max = 0;
 		//list for all the values from each question
+		ArrayList<Integer> values = new ArrayList<Integer>();
 
 		//adding question answer to list
-
-		for(Question q : this.questions)
+		for(surveyResponse sr : this.getResponses())
 		{
-			values.add(q.getAnswer());
+			values.add(sr.getResponsesSum());
 		}
-		//getting the min value and retunring it
-		min = Collections.min(values);
-		return min;
+		//getting the max value and retunring it
+		max = Collections.min(values);
+		return max;
 	}
 	
 	public double averageDeviationQuestion(int index)
@@ -281,4 +282,6 @@ public class Survey {
 		return min;
 	}
 	
+	
+
 }
