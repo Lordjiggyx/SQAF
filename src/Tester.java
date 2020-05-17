@@ -172,4 +172,58 @@ public class Tester {
 		//Test to see that 4+5+2+2 = 13 PASS
 		assertEquals("Sum of survet repsonse should be 13" ,13 , sr.getResponsesSum());
 	}
+
+	@Test
+	public void adsr()
+	{
+		//Creation od questions and setting answer values
+		Question one = new Question("Customer Service");
+		one.setAnswer(3);
+		Question two = new Question("Food Quality");
+		two.setAnswer(4);
+		
+		//creation of a survey object and adding the questions to this survey
+		Survey s = new Survey();
+		s.add(one);
+		s.add(two);
+		
+		//Simiulating a different set of answers for the same questions in the survey
+		ArrayList<Question> questions1 = new ArrayList<Question>();
+		//Keeps the names of the questions in the survey 
+		for(Question q :s.getQuestions() )
+		{
+			//new question with name of questions from the survey
+			Question nq = new Question(q.getQuestion());
+			//mimics a change in answer value
+			nq.setAnswer(5);
+			//added to a list to represent the questions with different value answers
+			questions1.add(nq);
+		}
+		
+
+
+		//creating a survey response object that takes in the surveys questions and questions with different answers
+		surveyResponse sr = new surveyResponse(s.getQuestions());
+		surveyResponse sr1 = new surveyResponse(questions1);
+
+		//adding the survey response to the objects
+		s.addResponse(sr);
+		s.addResponse(sr1);
+		
+		//Feel free to uncomment and check the responses sum for different surevy responses
+		//Sum = 7
+		System.out.println(s.getResponses().get(0).getResponsesSum());
+		
+		//Sum = 10
+		System.out.println(s.getResponses().get(1).getResponsesSum());
+		
+		//Use this link to check if the calculation is correct https://miniwebtool.com/average-deviation-calculator/	
+		System.out.println(s.getADSurveyResponses());
+		
+		//Test to get average Deviation
+		assertEquals("Average Deviation of Survey should be 1.5" ,1.5 , s.getADSurveyResponses()  ,1e-15);
+
+	}
+	
+	
 }

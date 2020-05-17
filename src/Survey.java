@@ -281,4 +281,43 @@ public class Survey {
 		return min;
 	}
 	
+	//Average deviation for whole survey goes through each survey repsponse
+	public double getADSurveyResponses()
+	{
+		//sum of each sum from a surevy response
+		int total = 0;
+		
+		//iterates through each survey response in survey
+		for(surveyResponse sr : this.getResponses())
+		{
+			total+=sr.getResponsesSum();
+		}
+		
+		
+		
+		//mean calculation
+		double mean = (float)total/this.responses.size();
+		
+		//Gathering of absoulute deviations
+		ArrayList<Double> absoultedev = new ArrayList<Double>();
+		for(surveyResponse sr : this.getResponses())
+		{
+			//must be absolute value
+			double abs = Math.abs(sr.getResponsesSum() - mean);
+			absoultedev.add(abs);
+		}
+		
+		//absoulute devaiation
+		double totalabs = 0;
+		for(double d:absoultedev)
+		{
+			totalabs+=d;
+		}
+		
+		double aveDev = Math.round((float)totalabs/this.responses.size() * 100.0)/100.0;
+
+		
+		return aveDev;
+	}
+
 }
