@@ -77,7 +77,7 @@ Two tasks that I will compare are:
 1. Get average deviation of a survey
 2. Add a question to a survey
 
-<p align="center" >
+
 | Question 	| Task 1 	| Task 2 	|
 |----------	|--------	|--------	|
 | 1        	| Yes    	| No     	|
@@ -90,7 +90,7 @@ Two tasks that I will compare are:
 | 8        	| Yes    	| No     	|
 | 9        	| Yes    	| No     	|
 | SUM      	| 7      	| 2      	|
-<p>
+
 
 As we can see task one answers yes to 7 questions meaning the it is L while task 2 only answers yes to 2 meaning that it is S 
 
