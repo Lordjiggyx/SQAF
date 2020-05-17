@@ -32,14 +32,10 @@ public class Tester {
 	//add question to survey
 	public int addQuestion(Question q , Survey surv)
 	{
-		//Creation of question objectS
-		Question one = q;
-		//Creation of survey class with just name
-		Survey s = surv;
-		//adding questions to the surevy
-		s.add(one);
 		
-		return s.getQuestions().size();
+		//adding questions to the surevy
+		surv.add(q);	
+		return surv.getQuestions().size();
 
 	}
 
@@ -54,11 +50,9 @@ public class Tester {
 	//set question answer
 	public int questionAnswer(Question q)
 	{
-		//Creation of question objwct
-		Question one = q;
 		//Set the answer value of the question
-		one.setAnswer(1);
-		return one.getAnswer();
+		q.setAnswer(1);
+		return q.getAnswer();
 	}
 	
 	//getting the responses of a survey response
@@ -148,10 +142,12 @@ public class Tester {
 		return responses;
 	}
 	
-	@Test
+	
 	public int sumOfResponses(surveyResponse sr)
 	{
 		return sr.getResponsesSum();
 	}
+
+
 
 }

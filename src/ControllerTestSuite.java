@@ -28,6 +28,7 @@ public class ControllerTestSuite {
 		ArrayList<Question> questions = new ArrayList<Question>();
 		questions.add(one);
 
+		//Creation of a survey passing in list of questions
 		Survey s = test.createSurvey(questions);
 		assertTrue("Should be an object of type survey", s instanceof Survey);
 
@@ -36,8 +37,9 @@ public class ControllerTestSuite {
 	@Test 
 	public void addQuestion()
 	{
-
+		//Creation of a survey 
 		Survey s = test.createSurveyEmpty();
+		//creation of question
 		Question one = new Question("Customer Service");
 		assertEquals("Length of questions array should be 1",1 ,test.addQuestion(one, s));
 	}
