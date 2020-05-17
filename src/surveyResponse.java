@@ -27,6 +27,17 @@ public class surveyResponse {
 		return responses;
 	}
 
+	//Method used to get the sum of answers to questions in a response
+	public int getResponsesSum()
+	{
+		int sum = 0;
+		for(int x : this.getResponses())
+		{
+			sum+= x;
+		}
+		return sum;
+		
+	}
 
 
 

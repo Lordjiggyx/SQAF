@@ -147,4 +147,29 @@ public class Tester {
 		}
 		return responses;
 	}
+	
+	@Test
+	public void sumOfResponses()
+	{
+		//make survey and questions
+		Survey s = new Survey();
+		Question one = new Question("Customer Service"); 
+		one.setAnswer(4);
+		Question two = new Question("Food Quality");
+		two.setAnswer(5);
+		Question three = new Question("Food Quality");
+		three.setAnswer(2);
+		Question four = new Question("Food Quality");
+		four.setAnswer(2);
+		//Questions added to survey
+		s.add(one);
+		s.add(two);
+		s.add(three);
+		s.add(four);
+		
+		//survey response created with questions from survey
+		surveyResponse sr = new surveyResponse(s.getQuestions());
+		//Test to see that 4+5+2+2 = 13 PASS
+		assertEquals("Sum of survet repsonse should be 13" ,13 , sr.getResponsesSum());
+	}
 }
