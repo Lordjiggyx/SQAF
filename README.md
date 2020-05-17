@@ -51,3 +51,4 @@ My checklist included the following:
 1. Does this pull request introduce a new feature? (yes / no)
 2. If yes how is this feature tested / if no was this a bug fix (yes/no)
 
+Process followed in the following [pull request](https://github.com/Lordjiggyx/SQAF/pull/2)
