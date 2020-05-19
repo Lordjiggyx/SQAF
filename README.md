@@ -126,3 +126,61 @@ The next 5 commits show the changing of code which allowed the tests to pass
 
 * [Test 5](https://github.com/Lordjiggyx/SQAF/commit/836b38a555c7d3205c5c51fae3f7b4d230289d0c) - This commit shows me creating a method in the Survey class that gets an array for the question answers in a survey Response and the correspsonding test
 
+### EclEmma
+
+EclEmma is the tool i chose for test coverage in my project , EclEmma is a free Java code coverage tool for Eclipse, available under the Eclipse Public License. It brings code coverage analysis directly into the Eclipse workbench it provides the following benefits
+
+1. Fast develop/test cycle: Launches from within the workbench like JUnit test runs can directly be analyzed for code coverage.
+2. Rich coverage analysis: Coverage results are immediately summarized and highlighted in the Java source code editors.
+3. Non-invasive: EclEmma does not require modifying your projects or performing any other setup.
+
+### How To Use
+This metric tool is actually built into the latest versions of eclipse meaning there is no need for any external downloads.
+
+This tool is used by clicking the 3rd run button in the eclipse menu
+
+<p align="center">
+<img src="./Images/image1.PNG" width="400">
+<p>
+
+Once this button has been clicked your workspace should should display the project and the corresponding test coverage value when you click into each folder it displays the coverage percentage of each corresponding folder or file in the project , when you click into java flies it shows the corresponding methods and their coverage value
+
+<p align="center">
+<img src="./Images/image2.PNG" width="800">
+<p>
+
+In the case of my project I have a high initial coverage of 94.7%, however this means that some pieces of code are not being executed or covered by tests. ECLEmma identifies pieces of code with 3 different colours: Red, Yellow and Green
+
+#### Red
+
+<p align="center">
+<img src="./Images/Image5.PNG" width="800">
+<p>
+
+As we can see the method setName is not executed at all thus EclEmma highlights it red and assigns it a coverage value of 0%, removing methods or block of code highlighted red will increase the overall coverage metric as it means less pieces of code not being used are present.
+
+#### Yellow
+
+<p align="center">
+<img src="./Images/Image6.PNG" width="800">
+<p>
+
+As we can see the method setAnswer has a coverage value of 100% however a piece of code is highlighted yellow, this means this piece of code is partially covered this means that there is another condition that could have been covered
+
+#### Green
+
+<p align="center">
+<img src="./Images/Image4.PNG" width="800">
+<p>
+
+Any line piece of code that has been highlighted green has been executed by tests and therefore has been covered.
+
+### EclEmma Corrections
+
+As we can see in the original screenshot my project had a coverage score of 94.7% this meant that i needed to make a number of changes in order to increase this coverage metric
+
+<p align="center">
+<img src="./Images/image7.PNG" width="800">
+<p>
+
+After making changes in the following [commit](https://github.com/Lordjiggyx/SQAF/commit/ac5ac12ee3c9e62815f1dd24394938d7c085e7bb) We can see that the coverage metric for my project increased to 99.8%. I have never used this tool before and never understood what test coverage means after using it now i see the advantage of using this tool.
