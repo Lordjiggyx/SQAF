@@ -185,6 +185,53 @@ As we can see in the original screenshot my project had a coverage score of 94.7
 
 After making changes in the following [commit](https://github.com/Lordjiggyx/SQAF/commit/ac5ac12ee3c9e62815f1dd24394938d7c085e7bb) We can see that the coverage metric for my project increased to 99.8%. I have never used this tool before and never understood what test coverage means after using it now i see the advantage of using this tool.
 
+
+# Team Version Control
+
+To manage version control for this project I used the gitflow process.
+
+## What is the Gitflow
+
+Gitflow is a workflow process that defines a branching model for a scheduled project release.This is used mainly for managing large projects. The master branch and the develop branches are used to record the project history and the remaining branches can fall into many categories of branches e.g feature branches , hotfix branches and release branches.
+
+## My Branches
+
+##### Master
+This branch is where the final project containing all documentation and code would be located no changes to this branch are allowed, only pull requests from the develop branch are allowed
+
+##### Develop
+This branch is where any near final changes are located before making it into the master branch this branch only takes pull requests from either the Docbranch or Devbranch.
+
+##### DevBranch
+This branch is includes any final additional features to the actual code of the project, pull requests for this branch must be from a branch with the following format <BRANCH_NAME-DEV>.
+
+##### DocBranch
+This branch is includes any final additional features/sections to the documentation of the project, pull requests for this branch must be from a branch with that does not follow the Devbranch naming format.
+
+the other branches in the project are created to add additional content to these 4 branches. each branch will be merged to one of the following four branches and then to the develop branch only upon project completion will the develop branch be merged to the master branch and a release branch will be created.
+
+ #### List of branches created:
+
+* **TDD** - Branch containing Test Driven Development content for documentation
+
+* **SprintBacklog** - Branch containing Sprint Backlog and task estimation  content for documentation
+
+* **MetricTool** - Branch containing Test coverage content for documentation
+
+* **VersionControl** - Branch containing Team version control content for documentation
+
+* **ReviewChecklist** - Branch containing Sprint Backlog content for documentation
+
+* **Controller-DEV** - building on all the pieces of code from the other branches this branch housed the controller and the test suite for the controller.
+
+* **Arithmetic1-DEV** - Branch conatained the initial arithmetic operations that were corrected I had made a logical error in how i was conducting these operations which are explained in the [pull request](https://github.com/Lordjiggyx/SQAF/pull/7) related to this branch.
+
+* **Arithmetic-DEV** - Branch conatained the initial arithmetic operations that were meant to be conducted on the survey class.
+
+* **Survey-DEV** - Branch contained the initial code for the application with the creation of the survey and question classes including tests
+
+* **SurveyResponse-DEV** - Branch contained the code related to the survey response class including tests
+
 # Review Checklist
 
 ### What is a code review?
